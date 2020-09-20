@@ -9,7 +9,7 @@ try {
   app.use(bodyParser.json({ urlencoded: true }));
 
   //app.all("*", validate);
-
+  app.use("/", express.static("index"));
   app.use("/api", validate, require("./routes/routes"));
 } catch (e) {
   console.log("Eror occucered " + err);
