@@ -1,6 +1,10 @@
 const express = require("express");
+const { route } = require("../routes/routes");
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.send("working...");
+});
 router.post("", (req, res) => {
   const fizzArray = [];
 
